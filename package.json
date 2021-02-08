@@ -1,0 +1,53 @@
+{
+  "name": "sleighdogs-feedback-tool",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "chart.js": "^2.9.4",
+    "firebase": "^8.2.1",
+    "firebase-admin": "^9.4.2",
+    "hamburger-react": "^2.4.0",
+    "moment": "^2.29.1",
+    "npm-check-updates": "^10.2.5",
+    "phosphor-react": "^1.1.2",
+    "react": "^16.14.0",
+    "react-animated-slider": "^2.0.0",
+    "react-chartjs-2": "^2.11.1",
+    "react-dates": "^18.5.0",
+    "react-dom": "^16.14.0",
+    "react-form-with-constraints": "^0.11.0",
+    "react-materialize": "^2.6.0",
+    "react-redux": "^5.1.2",
+    "react-redux-firebase": "^2.5.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^4.0.1",
+    "react-select": "^3.1.1",
+    "react-tabs": "^3.1.2",
+    "react-trend": "^1.2.5",
+    "react-vis": "^1.11.7",
+    "redux": "^4.0.5",
+    "redux-firestore": "^0.6.4",
+    "redux-thunk": "^2.3.0",
+    "simple-react-validator": "^1.6.0",
+    "styled-components": "^5.2.1",
+    "uninstall": "0.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "css-loader": "^5.0.1"
+  }
+}

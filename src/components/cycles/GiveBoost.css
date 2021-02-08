@@ -1,0 +1,259 @@
+/**
+ * This CSS is originally from https://github.com/erichbehrens/react-animated-slider.
+ * The component offers a clean DOM and offers a styling example which I adapted,
+ * original can be found in the following codesandbox https://codesandbox.io/s/react-animated-slider-q8rdo.
+ */
+
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+
+* {
+  outline: none;
+}
+
+.wrapper {
+  max-width: 1335px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.wrapper a {
+  display: inline-block;
+  margin: 5px;
+}
+
+.wrapper a:first-child {
+  margin-left: 0;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+}
+
+.slide {
+  height: 100vh;
+  background-size: cover !important;
+}
+
+.slide::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(transparent),
+    to(rgba(0, 0, 0, 0.30))
+  );
+  background: linear-gradient(#2e355d, #0b102b);
+  bottom: 0;
+  left: 0;
+}
+
+.previousButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: url("../../res/arrow-right.svg") no-repeat center center /
+    32px;
+  width: 48px;
+  height: 48px;
+  text-indent: -9999px;
+  cursor: pointer;
+  background-color: #2e355d;
+  /* From: https://boxshadows.nakulrathore.com/ */
+  box-shadow:0 6px 6px rgba(10,16,20,.15), 0 0 52px rgba(10,16,20,.12); 
+  border:0;
+}
+
+
+.previousButton:hover,
+.nextButton:hover {
+ background-color: #1e847f;
+}
+
+.previousButton {
+  left: 20px;
+  -webkit-transform: rotate(180deg) translateY(calc(50% + 0px));
+  transform: rotate(180deg) translateY(calc(50% + 0px));
+}
+
+.previousButton:hover {
+  left: 18px;
+}
+
+.nextButton {
+  right: 20px;
+}
+
+.nextButton:hover {
+  right: 18px;
+}
+
+.slider-content {
+  text-align: center;
+}
+
+.slider-content .inner {
+  padding: 4em;
+  box-sizing: border-box;
+  position: absolute;
+  width: 80%;
+  top: 48%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+
+  background: white;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border: 5px solid #1e847f;
+}
+
+.slider-content .inner p {
+  line-height: 1.5;
+  margin: 20px auto 30px;
+  max-width: 100%;
+  display: flex;
+  flex-flow: row-reverse; /* or 'row' and change the order of your html elements */
+  justify-content: flex-start; /* or 'flex-start' and change the order of your html elements */
+  flex-grow: 1;
+}
+
+.slider-content section {
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+}
+
+
+.slider-content section span {
+  font-size: 12px;
+  display: inline-block;
+  text-align: left;
+  line-height: 1.4;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.slider-content section img {
+  width: 40px;
+  height: 40px;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+  vertical-align: middle;
+}
+
+input[type=range] {
+  border: none !important; 
+  width: 20em;
+}
+
+input[type=range i] {
+  background: none;
+}
+
+/* from https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #1e847f;
+  cursor: pointer;
+  margin-top: -14px; 
+}
+
+/* from https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #e1e2e1 !important;
+}
+
+
+/* from https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track:active {
+  background: #1e847f;
+}
+
+
+.thumb, .thumb span {
+  display: none;
+}
+
+
+
+.slide.current button {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+
+@media (max-width: 1335px) {
+  .previousButton,
+  .nextButton {
+    top: 50%;
+  }
+
+  .slider-wrapper {
+    height: 100vh;
+  }
+  
+  .slider-content .inner p {
+    flex-flow: column !important;
+  }
+
+}
+
+@media (max-width: 769px) {
+  .slider-content .inner {
+    top: 20%;
+    padding: 7em 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: none;
+  }
+  .previousButton,
+  .nextButton {
+    top: 40%;
+  }
+}
