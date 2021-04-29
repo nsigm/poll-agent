@@ -15,7 +15,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyle.js";
 import AppWrapper from "./styles/AppWrapper.js";
 import AppInner from "./styles/AppInner.js";
-import NavBar from "./components/layout/NavBar";
+import NavBar from "./components/layout/Navbar";
 import Dashboard from "./components/dashboard/Dashboard";
 import LandingPage from "./components/auth/LandingPage";
 import CreateCycle from "./components/cycles/CreateCycle";

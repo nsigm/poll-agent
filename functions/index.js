@@ -24,9 +24,9 @@ exports.initializeCycle = functions.firestore
   .onCreate((cycle) => {
     var cycleData = cycle.data();
     var todayDate = moment().startOf("day");
-    var cycleDate = moment(pollData.date.toDate());
+    var cycleDate = moment(cycleData.date.toDate());
     if (todayDate.isAfter(cycleDate, "day")) {
-      return pushQuestions(cycleData);
+      return pushBoosts(cycleData);
     } else {
       console.log(cycleData.title + " is starting on a later date.");
     }

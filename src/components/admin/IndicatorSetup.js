@@ -55,7 +55,7 @@ class IndicatorSetup extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addIndicator({ name: this.state.kpi });
-    this.props.history.push("/agent-setup");
+    this.props.history.push("/indicator-setup");
   };
 
   handleSelect = (e) => {
@@ -72,7 +72,7 @@ class IndicatorSetup extends Component {
       maxValue: this.state.maxValue,
       kpi: this.state.kpi,
     });
-    this.props.history.push("/agent-setup");
+    this.props.history.push("/indicator-setup");
   };
 
   handleDelete = (e, kpi) => {

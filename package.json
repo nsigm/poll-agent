@@ -26,7 +26,7 @@
     "react-trend": "^1.2.5",
     "react-vis": "^1.11.7",
     "redux": "^4.0.5",
-    "redux-firestore": "^0.6.4",
+    "redux-firestore": "^0.15.0",
     "redux-thunk": "^2.3.0",
     "simple-react-validator": "^1.6.0",
     "styled-components": "^5.2.1",
