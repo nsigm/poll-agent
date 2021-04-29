@@ -26,7 +26,7 @@ A polling and feedback progressive web application built with React, Redux and F
 ### Evaluation of KPIs through polling
 ![Evaluation](https://github.com/nsigm/pollAgent/blob/master/src/res/Evaluation.gif)
 ### Customization of KPIs, polls and boost cycles
-![KPI Setup](https://github.com/nsigm/pollAgent/blob/master/src/res/KPISetup.gif)
+![KPI Setup](https://github.com/nsigm/pollAgent/blob/master/src/res/KPIsetup.gif)
 ### Boosts as interactive feedback
 ![Boosts](https://github.com/nsigm/pollAgent/blob/master/src/res/Boosts.gif)
 ### Visualization of KPIs
